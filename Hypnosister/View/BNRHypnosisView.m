@@ -7,15 +7,22 @@
 
 #import "BNRHypnosisView.h"
 
+
+//添加类拓展
+
 @implementation BNRHypnosisView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+//@synthesize circleColor;
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
+    }
+    return self;
 }
-*/
 
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
@@ -45,9 +52,31 @@
     
     //添加各种属性
     path.lineWidth = 10;
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     
     [path stroke];
+}
+
+
+//覆盖touchbegan
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"{%@} was touched",self);
+    
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red
+                                           green:green
+                                            blue:blue
+                                           alpha:1.0];
+    
+    self.circleColor = randomColor;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor {
+    _circleColor = circleColor;
+    [self setNeedsDisplay];
 }
 
 @end
