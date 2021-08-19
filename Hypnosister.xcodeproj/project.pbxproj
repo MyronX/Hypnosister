@@ -16,6 +16,7 @@
 		1141079126CE9760008666D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141079026CE9760008666D9 /* main.m */; };
 		1141079B26CE9761008666D9 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141079A26CE9761008666D9 /* HypnosisterTests.m */; };
 		114107A626CE9761008666D9 /* HypnosisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 114107A526CE9761008666D9 /* HypnosisterUITests.m */; };
+		9CB700E326CEA9DD00C12F53 /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB700E226CEA9DD00C12F53 /* BNRHypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		114107A126CE9761008666D9 /* HypnosisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		114107A526CE9761008666D9 /* HypnosisterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterUITests.m; sourceTree = "<group>"; };
 		114107A726CE9761008666D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB700E126CEA9DD00C12F53 /* BNRHypnosisView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisView.h; sourceTree = "<group>"; };
+		9CB700E226CEA9DD00C12F53 /* BNRHypnosisView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		1141077D26CE975E008666D9 /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				9CB700E026CEA9B000C12F53 /* View */,
+				9CB700DF26CEA9A600C12F53 /* Controller */,
 				1141077E26CE975E008666D9 /* AppDelegate.h */,
 				1141077F26CE975E008666D9 /* AppDelegate.m */,
 				1141078126CE975E008666D9 /* SceneDelegate.h */,
@@ -135,6 +140,22 @@
 				114107A726CE9761008666D9 /* Info.plist */,
 			);
 			path = HypnosisterUITests;
+			sourceTree = "<group>";
+		};
+		9CB700DF26CEA9A600C12F53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9CB700E026CEA9B000C12F53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CB700E126CEA9DD00C12F53 /* BNRHypnosisView.h */,
+				9CB700E226CEA9DD00C12F53 /* BNRHypnosisView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +290,7 @@
 				1141078626CE975E008666D9 /* ViewController.m in Sources */,
 				1141078026CE975E008666D9 /* AppDelegate.m in Sources */,
 				1141079126CE9760008666D9 /* main.m in Sources */,
+				9CB700E326CEA9DD00C12F53 /* BNRHypnosisView.m in Sources */,
 				1141078326CE975E008666D9 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
